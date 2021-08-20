@@ -5,6 +5,8 @@ const express = require('express');
 const PORT = process.env.PORT || 3001
 const app = express();
 
+app.use(express.static('public'));
+
 // parse incoming string or array data
 app.use(express.urlencoded({ extended: true }));
 // parse incoming json data
@@ -81,9 +83,13 @@ app.get('/api/animals/:id', (req, res) => {
     }
 });
 
+app.get('/', (req, res) => {
+  res.sendFile(path.join(__dirname, './public/index.html'));
+});
+
 app.post('/api/animals', (req, res) => {
   // set id based on what the next index of the array will be
-  req.body.id = animals.length.toString();
+  req.body.id = animals.length.toString(); // req.body is where we access and use the data sent from a client to a server
 
   // if any data in req.body is incorrect, send 400 error back
   if (!validateAnimal(req.body)) {

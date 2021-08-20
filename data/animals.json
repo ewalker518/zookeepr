@@ -126,6 +126,25 @@
         "gun having"
       ],
       "id": "12"
+    },
+    {
+      "name": "Trogdor",
+      "species": "Dragon",
+      "diet": "peasants",
+      "personalityTraits": [
+        "burninator"
+      ],
+      "id": "13"
+    },
+    {
+      "name": "Jimmy Jimmy",
+      "species": "Red Steckled Elbermung",
+      "diet": "folivore",
+      "personalityTraits": [
+        "zany",
+        "anxious"
+      ],
+      "id": "14"
     }
   ]
 }
